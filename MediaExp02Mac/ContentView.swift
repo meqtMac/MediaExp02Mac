@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    var bytesCount = 0
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -16,6 +17,8 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear {
+       }
     }
 }
 

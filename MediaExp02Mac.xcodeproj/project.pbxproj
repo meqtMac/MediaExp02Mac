@@ -14,6 +14,23 @@
 		450A1D3C2A238B9900AE71B9 /* MediaExp02MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D3B2A238B9900AE71B9 /* MediaExp02MacTests.swift */; };
 		450A1D462A238B9900AE71B9 /* MediaExp02MacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D452A238B9900AE71B9 /* MediaExp02MacUITests.swift */; };
 		450A1D482A238B9900AE71B9 /* MediaExp02MacUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D472A238B9900AE71B9 /* MediaExp02MacUITestsLaunchTests.swift */; };
+		450A1D552A238BBE00AE71B9 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D542A238BBE00AE71B9 /* Decoder.swift */; };
+		450A1D592A238DBE00AE71B9 /* TAppDecoder in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D582A238DBD00AE71B9 /* TAppDecoder */; };
+		450A1D632A23930100AE71B9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D622A23930100AE71B9 /* main.swift */; };
+		450A1D7D2A2396B700AE71B9 /* 1.bin in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D702A23932B00AE71B9 /* 1.bin */; };
+		450A1D7E2A2396B700AE71B9 /* 2.bin in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D682A23932B00AE71B9 /* 2.bin */; };
+		450A1D7F2A2396B700AE71B9 /* 3.bin in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D6A2A23932B00AE71B9 /* 3.bin */; };
+		450A1D802A2396B700AE71B9 /* 4.bin in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D6D2A23932B00AE71B9 /* 4.bin */; };
+		450A1D812A2396B700AE71B9 /* 5.bin in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D712A23932B00AE71B9 /* 5.bin */; };
+		450A1D822A2396B700AE71B9 /* 6.bin in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D6B2A23932B00AE71B9 /* 6.bin */; };
+		450A1D832A2396B700AE71B9 /* 7.bin in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D692A23932B00AE71B9 /* 7.bin */; };
+		450A1D842A2396B700AE71B9 /* 8.bin in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D6C2A23932B00AE71B9 /* 8.bin */; };
+		450A1D852A2396B700AE71B9 /* 9.bin in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D6E2A23932B00AE71B9 /* 9.bin */; };
+		450A1D862A2396B700AE71B9 /* 10.bin in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D6F2A23932B00AE71B9 /* 10.bin */; };
+		450A1D8A2A23AB7700AE71B9 /* socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D892A23AB7700AE71B9 /* socket.swift */; };
+		450A1D932A23B81200AE71B9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D922A23B81200AE71B9 /* main.swift */; };
+		450A1D972A23B82700AE71B9 /* socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D892A23AB7700AE71B9 /* socket.swift */; };
+		450A1D982A23C3F500AE71B9 /* socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D892A23AB7700AE71B9 /* socket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +50,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		450A1D5E2A23930100AE71B9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = usr/share/man/man1;
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		450A1D8E2A23B81200AE71B9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		450A1D262A238B9700AE71B9 /* MediaExp02Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaExp02Mac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		450A1D292A238B9700AE71B9 /* MediaExp02MacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaExp02MacApp.swift; sourceTree = "<group>"; };
@@ -45,6 +83,23 @@
 		450A1D412A238B9900AE71B9 /* MediaExp02MacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediaExp02MacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		450A1D452A238B9900AE71B9 /* MediaExp02MacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaExp02MacUITests.swift; sourceTree = "<group>"; };
 		450A1D472A238B9900AE71B9 /* MediaExp02MacUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaExp02MacUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		450A1D542A238BBE00AE71B9 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		450A1D582A238DBD00AE71B9 /* TAppDecoder */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = TAppDecoder; sourceTree = "<group>"; };
+		450A1D602A23930100AE71B9 /* MediaExp02Server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MediaExp02Server; sourceTree = BUILT_PRODUCTS_DIR; };
+		450A1D622A23930100AE71B9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		450A1D682A23932B00AE71B9 /* 2.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 2.bin; sourceTree = "<group>"; };
+		450A1D692A23932B00AE71B9 /* 7.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 7.bin; sourceTree = "<group>"; };
+		450A1D6A2A23932B00AE71B9 /* 3.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 3.bin; sourceTree = "<group>"; };
+		450A1D6B2A23932B00AE71B9 /* 6.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 6.bin; sourceTree = "<group>"; };
+		450A1D6C2A23932B00AE71B9 /* 8.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 8.bin; sourceTree = "<group>"; };
+		450A1D6D2A23932B00AE71B9 /* 4.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 4.bin; sourceTree = "<group>"; };
+		450A1D6E2A23932B00AE71B9 /* 9.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 9.bin; sourceTree = "<group>"; };
+		450A1D6F2A23932B00AE71B9 /* 10.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 10.bin; sourceTree = "<group>"; };
+		450A1D702A23932B00AE71B9 /* 1.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 1.bin; sourceTree = "<group>"; };
+		450A1D712A23932B00AE71B9 /* 5.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 5.bin; sourceTree = "<group>"; };
+		450A1D892A23AB7700AE71B9 /* socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socket.swift; sourceTree = "<group>"; };
+		450A1D902A23B81200AE71B9 /* MediaExp02Client */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MediaExp02Client; sourceTree = BUILT_PRODUCTS_DIR; };
+		450A1D922A23B81200AE71B9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +124,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		450A1D5D2A23930100AE71B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		450A1D8D2A23B81200AE71B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +147,8 @@
 				450A1D282A238B9700AE71B9 /* MediaExp02Mac */,
 				450A1D3A2A238B9900AE71B9 /* MediaExp02MacTests */,
 				450A1D442A238B9900AE71B9 /* MediaExp02MacUITests */,
+				450A1D612A23930100AE71B9 /* MediaExp02Server */,
+				450A1D912A23B81200AE71B9 /* MediaExp02Client */,
 				450A1D272A238B9700AE71B9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +159,8 @@
 				450A1D262A238B9700AE71B9 /* MediaExp02Mac.app */,
 				450A1D372A238B9900AE71B9 /* MediaExp02MacTests.xctest */,
 				450A1D412A238B9900AE71B9 /* MediaExp02MacUITests.xctest */,
+				450A1D602A23930100AE71B9 /* MediaExp02Server */,
+				450A1D902A23B81200AE71B9 /* MediaExp02Client */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,8 +168,10 @@
 		450A1D282A238B9700AE71B9 /* MediaExp02Mac */ = {
 			isa = PBXGroup;
 			children = (
+				450A1D582A238DBD00AE71B9 /* TAppDecoder */,
 				450A1D292A238B9700AE71B9 /* MediaExp02MacApp.swift */,
 				450A1D2B2A238B9700AE71B9 /* ContentView.swift */,
+				450A1D542A238BBE00AE71B9 /* Decoder.swift */,
 				450A1D2D2A238B9900AE71B9 /* Assets.xcassets */,
 				450A1D322A238B9900AE71B9 /* MediaExp02Mac.entitlements */,
 				450A1D2F2A238B9900AE71B9 /* Preview Content */,
@@ -127,6 +202,41 @@
 				450A1D472A238B9900AE71B9 /* MediaExp02MacUITestsLaunchTests.swift */,
 			);
 			path = MediaExp02MacUITests;
+			sourceTree = "<group>";
+		};
+		450A1D612A23930100AE71B9 /* MediaExp02Server */ = {
+			isa = PBXGroup;
+			children = (
+				450A1D8B2A23AD0400AE71B9 /* Resources */,
+				450A1D892A23AB7700AE71B9 /* socket.swift */,
+				450A1D622A23930100AE71B9 /* main.swift */,
+			);
+			path = MediaExp02Server;
+			sourceTree = "<group>";
+		};
+		450A1D8B2A23AD0400AE71B9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				450A1D702A23932B00AE71B9 /* 1.bin */,
+				450A1D682A23932B00AE71B9 /* 2.bin */,
+				450A1D6A2A23932B00AE71B9 /* 3.bin */,
+				450A1D6D2A23932B00AE71B9 /* 4.bin */,
+				450A1D712A23932B00AE71B9 /* 5.bin */,
+				450A1D6B2A23932B00AE71B9 /* 6.bin */,
+				450A1D692A23932B00AE71B9 /* 7.bin */,
+				450A1D6C2A23932B00AE71B9 /* 8.bin */,
+				450A1D6E2A23932B00AE71B9 /* 9.bin */,
+				450A1D6F2A23932B00AE71B9 /* 10.bin */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		450A1D912A23B81200AE71B9 /* MediaExp02Client */ = {
+			isa = PBXGroup;
+			children = (
+				450A1D922A23B81200AE71B9 /* main.swift */,
+			);
+			path = MediaExp02Client;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +295,41 @@
 			productReference = 450A1D412A238B9900AE71B9 /* MediaExp02MacUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		450A1D5F2A23930100AE71B9 /* MediaExp02Server */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 450A1D642A23930100AE71B9 /* Build configuration list for PBXNativeTarget "MediaExp02Server" */;
+			buildPhases = (
+				450A1D5C2A23930100AE71B9 /* Sources */,
+				450A1D5D2A23930100AE71B9 /* Frameworks */,
+				450A1D5E2A23930100AE71B9 /* CopyFiles */,
+				450A1D7C2A2396A300AE71B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MediaExp02Server;
+			productName = MediaExp02Client;
+			productReference = 450A1D602A23930100AE71B9 /* MediaExp02Server */;
+			productType = "com.apple.product-type.tool";
+		};
+		450A1D8F2A23B81200AE71B9 /* MediaExp02Client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 450A1D942A23B81200AE71B9 /* Build configuration list for PBXNativeTarget "MediaExp02Client" */;
+			buildPhases = (
+				450A1D8C2A23B81200AE71B9 /* Sources */,
+				450A1D8D2A23B81200AE71B9 /* Frameworks */,
+				450A1D8E2A23B81200AE71B9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MediaExp02Client;
+			productName = MediaExp02Client;
+			productReference = 450A1D902A23B81200AE71B9 /* MediaExp02Client */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -206,6 +351,12 @@
 						CreatedOnToolsVersion = 14.3;
 						TestTargetID = 450A1D252A238B9700AE71B9;
 					};
+					450A1D5F2A23930100AE71B9 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					450A1D8F2A23B81200AE71B9 = {
+						CreatedOnToolsVersion = 14.3;
+					};
 				};
 			};
 			buildConfigurationList = 450A1D212A238B9700AE71B9 /* Build configuration list for PBXProject "MediaExp02Mac" */;
@@ -224,6 +375,8 @@
 				450A1D252A238B9700AE71B9 /* MediaExp02Mac */,
 				450A1D362A238B9900AE71B9 /* MediaExp02MacTests */,
 				450A1D402A238B9900AE71B9 /* MediaExp02MacUITests */,
+				450A1D5F2A23930100AE71B9 /* MediaExp02Server */,
+				450A1D8F2A23B81200AE71B9 /* MediaExp02Client */,
 			);
 		};
 /* End PBXProject section */
@@ -233,6 +386,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				450A1D592A238DBE00AE71B9 /* TAppDecoder in Resources */,
 				450A1D312A238B9900AE71B9 /* Preview Assets.xcassets in Resources */,
 				450A1D2E2A238B9900AE71B9 /* Assets.xcassets in Resources */,
 			);
@@ -252,6 +406,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		450A1D7C2A2396A300AE71B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				450A1D7D2A2396B700AE71B9 /* 1.bin in Resources */,
+				450A1D7E2A2396B700AE71B9 /* 2.bin in Resources */,
+				450A1D7F2A2396B700AE71B9 /* 3.bin in Resources */,
+				450A1D802A2396B700AE71B9 /* 4.bin in Resources */,
+				450A1D812A2396B700AE71B9 /* 5.bin in Resources */,
+				450A1D822A2396B700AE71B9 /* 6.bin in Resources */,
+				450A1D832A2396B700AE71B9 /* 7.bin in Resources */,
+				450A1D842A2396B700AE71B9 /* 8.bin in Resources */,
+				450A1D852A2396B700AE71B9 /* 9.bin in Resources */,
+				450A1D862A2396B700AE71B9 /* 10.bin in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -259,7 +430,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				450A1D982A23C3F500AE71B9 /* socket.swift in Sources */,
 				450A1D2C2A238B9700AE71B9 /* ContentView.swift in Sources */,
+				450A1D552A238BBE00AE71B9 /* Decoder.swift in Sources */,
 				450A1D2A2A238B9700AE71B9 /* MediaExp02MacApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +451,24 @@
 			files = (
 				450A1D462A238B9900AE71B9 /* MediaExp02MacUITests.swift in Sources */,
 				450A1D482A238B9900AE71B9 /* MediaExp02MacUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		450A1D5C2A23930100AE71B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				450A1D8A2A23AB7700AE71B9 /* socket.swift in Sources */,
+				450A1D632A23930100AE71B9 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		450A1D8C2A23B81200AE71B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				450A1D972A23B82700AE71B9 /* socket.swift in Sources */,
+				450A1D932A23B81200AE71B9 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +727,50 @@
 			};
 			name = Release;
 		};
+		450A1D652A23930100AE71B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2F4698C227;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		450A1D662A23930100AE71B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2F4698C227;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		450A1D952A23B81200AE71B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2F4698C227;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		450A1D962A23B81200AE71B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2F4698C227;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -571,6 +806,24 @@
 			buildConfigurations = (
 				450A1D522A238B9900AE71B9 /* Debug */,
 				450A1D532A238B9900AE71B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		450A1D642A23930100AE71B9 /* Build configuration list for PBXNativeTarget "MediaExp02Server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				450A1D652A23930100AE71B9 /* Debug */,
+				450A1D662A23930100AE71B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		450A1D942A23B81200AE71B9 /* Build configuration list for PBXNativeTarget "MediaExp02Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				450A1D952A23B81200AE71B9 /* Debug */,
+				450A1D962A23B81200AE71B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
