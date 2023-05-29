@@ -21,8 +21,10 @@ struct ContentView: View {
                 meidaViewModel.stopProcessing()
             }
             
-            List(meidaViewModel.processedData, id: \.self) { block in
-                Text("Processed Data: \(block)")
+            Text("\(meidaViewModel.currentFrame)")
+            
+            if !meidaViewModel.frames.isEmpty {
+                Image(decorative: meidaViewModel.frames.first!.cgImage, scale: 1.0)
             }
         }
         .padding()

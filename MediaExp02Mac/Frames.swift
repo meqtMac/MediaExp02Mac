@@ -45,6 +45,6 @@ func getGrayscaleImagesFromYpChannel(block: YpCbCrBlock) -> [Frame] {
             }
             frames.append(Frame(frameId: frameId, cgImage: image))
         }
-   }
+    }
     return frames
 }

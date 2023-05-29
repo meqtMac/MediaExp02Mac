@@ -30,19 +30,16 @@ class MediaViewModel: ObservableObject {
     /// use multithread to accelearte decodeing and with qos operation to have lower seqId with higher priority
     private let decodingQueue = DispatchQueue(label: "meqtmac.mediaExp02.decodingQueue", attributes: .concurrent)
     
-    private var frames: [Frame] = []
+    public var frames: [Frame] = []
     /// protect exclusive access to frames
     private let frameQueue = DispatchQueue(label: "meqtmac.medixExp02.frames")
-    //    private var frameSemaphore = DispatchSemaphore(value: 0)
-    
+    // private var frameSemaphore = DispatchSemaphore(value: 0)
     
     private var isDecoderThreadRunning = false
     var lastProcessedSeqId: Int = -1
     
-    
     func startProcessing() {
         isDecoderThreadRunning = true
-        
         
         // Start the socket thread
         DispatchQueue.global().async {
@@ -54,9 +51,9 @@ class MediaViewModel: ObservableObject {
             self.decoderThread()
         }
         
-//        DispatchQueue.global().async {
-//            self.frameThread()
-//        }
+        DispatchQueue.global().async {
+            self.frameThread()
+        }
     }
     
     func stopProcessing() {
@@ -110,7 +107,6 @@ class MediaViewModel: ObservableObject {
             
             socket.close()
             
-            stopProcessing()
         } catch {
             print("Error: \(error)")
         }
@@ -132,12 +128,10 @@ class MediaViewModel: ObservableObject {
                 }
                 
                 if let decodedBlock = block {
-                    
-//                    self.blockQueue.sync(flags: .barrier){
-//                        self.YpCbCrBlocks.append(decodedBlock)
-//                    }
-//                    self.blockSemaphore.signal()
-//                    print(decodedBlock.data.count)
+                    self.blockQueue.sync(flags: .barrier){
+                        self.YpCbCrBlocks.append(decodedBlock)
+                    }
+                    self.blockSemaphore.signal()
                 }
             }
         }
@@ -149,20 +143,20 @@ class MediaViewModel: ObservableObject {
             var block: YpCbCrBlock?
             
             blockQueue.sync(flags: .barrier) {
-                print(YpCbCrBlocks.map{$0.seqId})
                 block = YpCbCrBlocks.removeFirst()
             }
             
             if let processingBlock = block {
                 let renderedFrames = getGrayscaleImagesFromYpChannel(block: processingBlock)
                 
-                //                self.frameQueue.sync{
-                //                    self.frames.append(contentsOf: renderedFrames)
-                //                }
+                self.frameQueue.sync{
+                    print("put images to frames")
+                    self.frames.append(contentsOf: renderedFrames)
+                }
                 
-                //                DispatchQueue.main.async{
-                //                    self.processedData.append(contentsOf: renderedFrames.map({$0.frameId}))
-                //                }
+                DispatchQueue.main.async{
+                    self.processedData.append(contentsOf: renderedFrames.map({$0.frameId}))
+                }
             }
         }
     }
