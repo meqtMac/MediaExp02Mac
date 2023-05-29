@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var meidaViewModel = MediaViewModel()
-//    var bytesCount = 0
+    
+    let timer = Timer.publish(every: 0.05, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack {
@@ -21,13 +22,17 @@ struct ContentView: View {
                 meidaViewModel.stopProcessing()
             }
             
-            Text("\(meidaViewModel.currentFrame)")
-            
-            if !meidaViewModel.frames.isEmpty {
-                Image(decorative: meidaViewModel.frames.first!.cgImage, scale: 1.0)
+           if let image = meidaViewModel.currentFrame {
+                Image(decorative: image.cgImage, scale: 1)
+                    .overlay(alignment: .bottomLeading) {
+                        Text("\(image.frameId)")
+                }
             }
         }
         .padding()
+        .onReceive(timer) { _  in
+            meidaViewModel.updateCurrentFrame()
+        }
     }
 }
 

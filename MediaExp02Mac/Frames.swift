@@ -19,7 +19,7 @@ func getGrayscaleImagesFromYpChannel(block: YpCbCrBlock) -> [Frame] {
     
     for i in 0..<blockFrames {
         let frameBytes = frameWidth*frameHeight*3/2
-        let frameGrayBytes = frameWidth&frameHeight
+        let frameGrayBytes = frameWidth*frameHeight
         let frameGrayRange = i*frameBytes ..< i*frameBytes+frameGrayBytes
         let frameId = block.seqId * blockFrames + i
         print("rendering \(frameId) frames.")

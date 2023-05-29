@@ -15,7 +15,15 @@ let blockFrames = 50
 
 class MediaViewModel: ObservableObject {
     @Published var processedData: [Int] = []
-    var currentFrame = 0
+    @Published var currentFrame: Frame?
+    
+    func updateCurrentFrame() {
+        self.frameQueue.sync{
+            if !frames.isEmpty {
+                currentFrame = frames.removeFirst()
+            }
+        }
+    }
     
     /// fifo operation
     private var binData: [Bin] = []
