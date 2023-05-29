@@ -8,17 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
-    var bytesCount = 0
+    @StateObject private var meidaViewModel = MediaViewModel()
+//    var bytesCount = 0
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button("Start Processing") {
+                meidaViewModel.startProcessing()
+            }
+            
+            Button("Stop Processing") {
+                meidaViewModel.stopProcessing()
+            }
+            
+            List(meidaViewModel.processedData, id: \.self) { block in
+                Text("Processed Data: \(block)")
+            }
         }
         .padding()
-        .onAppear {
-       }
     }
 }
 

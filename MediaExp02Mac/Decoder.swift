@@ -11,24 +11,16 @@ import Foundation
 /// - Parameters:
 ///   - inputData: The input data to be decoded.
 /// - Returns: The output data produced by the decoder, or `nil` if the decoder failed or the output file is not found.
-func runDecoder(inputData: Data) -> Data? {
+func decoder(seqId: Int, inputData: Data) -> Data? {
     /// The name of the temporary input file.
-    let inputFileName = "tempInput.bin"
+    let inputFileName = "\(seqId)tempInput.bin"
     /// The name of the temporary output file.
-    let outputFileName = "tempYuv"
+    let outputFileName = "\(seqId)tempYuv"
     
     let fileManager = FileManager.default
     
-//    // Create a temporary directory within the user's temporary directory
-//    let temporaryDirectory = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("Decoder")
-//
-//    // Create the temporary directory if it doesn't exist
-//    try? fileManager.createDirectory(at: temporaryDirectory, withIntermediateDirectories: true, attributes: nil)
-//
-    // Create the temporary input file path
-    let inputFilePath = fileManager.temporaryDirectory.appendingPathComponent(inputFileName)
+   let inputFilePath = fileManager.temporaryDirectory.appendingPathComponent(inputFileName)
     
-    // Write the input data to the temporary input file
     do {
         try inputData.write(to: inputFilePath)
     } catch {
@@ -45,8 +37,8 @@ func runDecoder(inputData: Data) -> Data? {
     task.launchPath = decoderPath
     task.arguments = ["-b", inputFilePath.path, "-o", outputFilePath.path]
     
-    let pipe = Pipe()
-    task.standardOutput = pipe
+//    let pipe = Pipe()
+//    task.standardOutput = pipe
     
     task.launch()
     task.waitUntilExit()

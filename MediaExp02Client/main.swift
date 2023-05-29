@@ -14,11 +14,11 @@ func startClient() {
     clientAddress.sin_family = sa_family_t(AF_INET)
     clientAddress.sin_port = clientPort.bigEndian
     
-    let ptonResult = withUnsafeMutableBytes(of: &clientAddress.sin_addr.s_addr) { rawBuffer in
+    let _ = withUnsafeMutableBytes(of: &clientAddress.sin_addr.s_addr) { rawBuffer in
         inet_pton(AF_INET, "127.0.0.1", rawBuffer.baseAddress!)
     }
     
-   let socketFileDescriptor = socket(AF_INET, SOCK_STREAM, 0)
+    let socketFileDescriptor = socket(AF_INET, SOCK_STREAM, 0)
     guard socketFileDescriptor != -1 else {
         print("Failed to create socket")
         return
