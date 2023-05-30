@@ -6,6 +6,8 @@
 //
 
 import XCTest
+import Foundation
+import Darwin
 @testable import MediaExp02Mac
 
 final class MediaExp02MacTests: XCTestCase {
@@ -19,18 +21,52 @@ final class MediaExp02MacTests: XCTestCase {
     }
 
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        func startClient() {
+            let clientPort: UInt16 = 12345
+            var clientAddress = sockaddr_in()
+            clientAddress.sin_family = sa_family_t(AF_INET)
+            clientAddress.sin_port = clientPort.bigEndian
+            
+            let _ = withUnsafeMutableBytes(of: &clientAddress.sin_addr.s_addr) { rawBuffer in
+                inet_pton(AF_INET, "127.0.0.1", rawBuffer.baseAddress!)
+            }
+            
+            let socketFileDescriptor = socket(AF_INET, SOCK_STREAM, 0)
+            guard socketFileDescriptor != -1 else {
+                print("Failed to create socket")
+                return
+            }
+            
+            let connectResult = connect(socketFileDescriptor, sockaddr_cast(&clientAddress), socklen_t(MemoryLayout<sockaddr_in>.size))
+            guard connectResult != -1 else {
+                print("Failed to connect")
+                return
+            }
+            
+            var socket = Socket(socketFileDescriptor: socketFileDescriptor)
+            
+            do {
+                let filesData = try socket.receiveData()
+                guard let files = socket.extractInt(from: filesData) else {
+                    print("Failed to get file numbers")
+                    return
+                }
+                print("\(files) to receive")
+                try socket.sendData("received \(files) to accept".data(using: .utf8)!)
+                
+                for _ in 0..<files{
+                    if let fileData = try socket.receiveFile() {
+                        try socket.sendData("received \(fileData.count) bytes".data(using: .utf8)!)
+                        print("received \(fileData.count) bytes")
+                    }
+                }
+            }catch{
+                print("Error: \(error)")
+            }
+            
+            socket.close()
         }
+        startClient()
     }
-
+    
 }
