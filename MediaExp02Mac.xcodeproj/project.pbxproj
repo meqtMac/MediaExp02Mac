@@ -17,20 +17,20 @@
 		450A1D552A238BBE00AE71B9 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D542A238BBE00AE71B9 /* Decoder.swift */; };
 		450A1D592A238DBE00AE71B9 /* TAppDecoder in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D582A238DBD00AE71B9 /* TAppDecoder */; };
 		450A1D632A23930100AE71B9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D622A23930100AE71B9 /* main.swift */; };
-		450A1D7D2A2396B700AE71B9 /* 1.bin in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D702A23932B00AE71B9 /* 1.bin */; };
-		450A1D7E2A2396B700AE71B9 /* 2.bin in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D682A23932B00AE71B9 /* 2.bin */; };
-		450A1D7F2A2396B700AE71B9 /* 3.bin in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D6A2A23932B00AE71B9 /* 3.bin */; };
-		450A1D802A2396B700AE71B9 /* 4.bin in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D6D2A23932B00AE71B9 /* 4.bin */; };
-		450A1D812A2396B700AE71B9 /* 5.bin in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D712A23932B00AE71B9 /* 5.bin */; };
-		450A1D822A2396B700AE71B9 /* 6.bin in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D6B2A23932B00AE71B9 /* 6.bin */; };
-		450A1D832A2396B700AE71B9 /* 7.bin in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D692A23932B00AE71B9 /* 7.bin */; };
-		450A1D842A2396B700AE71B9 /* 8.bin in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D6C2A23932B00AE71B9 /* 8.bin */; };
-		450A1D852A2396B700AE71B9 /* 9.bin in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D6E2A23932B00AE71B9 /* 9.bin */; };
-		450A1D862A2396B700AE71B9 /* 10.bin in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D6F2A23932B00AE71B9 /* 10.bin */; };
-		450A1D8A2A23AB7700AE71B9 /* socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D892A23AB7700AE71B9 /* socket.swift */; };
+		450A1D8A2A23AB7700AE71B9 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D892A23AB7700AE71B9 /* Socket.swift */; };
 		450A1D932A23B81200AE71B9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D922A23B81200AE71B9 /* main.swift */; };
-		450A1D972A23B82700AE71B9 /* socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D892A23AB7700AE71B9 /* socket.swift */; };
-		450A1D982A23C3F500AE71B9 /* socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D892A23AB7700AE71B9 /* socket.swift */; };
+		450A1D972A23B82700AE71B9 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D892A23AB7700AE71B9 /* Socket.swift */; };
+		450A1D982A23C3F500AE71B9 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D892A23AB7700AE71B9 /* Socket.swift */; };
+		45417D5C2A2611D6008FE147 /* 1.bin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 450A1D702A23932B00AE71B9 /* 1.bin */; };
+		45417D5D2A2611D6008FE147 /* 2.bin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 450A1D682A23932B00AE71B9 /* 2.bin */; };
+		45417D5E2A2611D6008FE147 /* 3.bin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 450A1D6A2A23932B00AE71B9 /* 3.bin */; };
+		45417D5F2A2611D6008FE147 /* 4.bin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 450A1D6D2A23932B00AE71B9 /* 4.bin */; };
+		45417D602A2611D6008FE147 /* 5.bin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 450A1D712A23932B00AE71B9 /* 5.bin */; };
+		45417D612A2611D6008FE147 /* 6.bin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 450A1D6B2A23932B00AE71B9 /* 6.bin */; };
+		45417D622A2611D6008FE147 /* 7.bin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 450A1D692A23932B00AE71B9 /* 7.bin */; };
+		45417D632A2611D6008FE147 /* 8.bin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 450A1D6C2A23932B00AE71B9 /* 8.bin */; };
+		45417D642A2611D6008FE147 /* 9.bin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 450A1D6E2A23932B00AE71B9 /* 9.bin */; };
+		45417D652A2611D6008FE147 /* 10.bin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 450A1D6F2A23932B00AE71B9 /* 10.bin */; };
 		45E29D902A246F7600FE2B1E /* MediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E29D8F2A246F7600FE2B1E /* MediaViewModel.swift */; };
 		45E29D922A24915800FE2B1E /* Frames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E29D912A24915800FE2B1E /* Frames.swift */; };
 /* End PBXBuildFile section */
@@ -56,9 +56,19 @@
 		450A1D5E2A23930100AE71B9 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
-			dstPath = usr/share/man/man1;
+			dstPath = Bins;
 			dstSubfolderSpec = 7;
 			files = (
+				45417D5C2A2611D6008FE147 /* 1.bin in CopyFiles */,
+				45417D5D2A2611D6008FE147 /* 2.bin in CopyFiles */,
+				45417D5E2A2611D6008FE147 /* 3.bin in CopyFiles */,
+				45417D5F2A2611D6008FE147 /* 4.bin in CopyFiles */,
+				45417D602A2611D6008FE147 /* 5.bin in CopyFiles */,
+				45417D612A2611D6008FE147 /* 6.bin in CopyFiles */,
+				45417D622A2611D6008FE147 /* 7.bin in CopyFiles */,
+				45417D632A2611D6008FE147 /* 8.bin in CopyFiles */,
+				45417D642A2611D6008FE147 /* 9.bin in CopyFiles */,
+				45417D652A2611D6008FE147 /* 10.bin in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +109,7 @@
 		450A1D6F2A23932B00AE71B9 /* 10.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 10.bin; sourceTree = "<group>"; };
 		450A1D702A23932B00AE71B9 /* 1.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 1.bin; sourceTree = "<group>"; };
 		450A1D712A23932B00AE71B9 /* 5.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 5.bin; sourceTree = "<group>"; };
-		450A1D892A23AB7700AE71B9 /* socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socket.swift; sourceTree = "<group>"; };
+		450A1D892A23AB7700AE71B9 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
 		450A1D902A23B81200AE71B9 /* MediaExp02Client */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MediaExp02Client; sourceTree = BUILT_PRODUCTS_DIR; };
 		450A1D922A23B81200AE71B9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		45E29D8F2A246F7600FE2B1E /* MediaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewModel.swift; sourceTree = "<group>"; };
@@ -214,7 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				450A1D8B2A23AD0400AE71B9 /* Resources */,
-				450A1D892A23AB7700AE71B9 /* socket.swift */,
+				450A1D892A23AB7700AE71B9 /* Socket.swift */,
 				450A1D622A23930100AE71B9 /* main.swift */,
 			);
 			path = MediaExp02Server;
@@ -416,16 +426,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				450A1D7D2A2396B700AE71B9 /* 1.bin in Resources */,
-				450A1D7E2A2396B700AE71B9 /* 2.bin in Resources */,
-				450A1D7F2A2396B700AE71B9 /* 3.bin in Resources */,
-				450A1D802A2396B700AE71B9 /* 4.bin in Resources */,
-				450A1D812A2396B700AE71B9 /* 5.bin in Resources */,
-				450A1D822A2396B700AE71B9 /* 6.bin in Resources */,
-				450A1D832A2396B700AE71B9 /* 7.bin in Resources */,
-				450A1D842A2396B700AE71B9 /* 8.bin in Resources */,
-				450A1D852A2396B700AE71B9 /* 9.bin in Resources */,
-				450A1D862A2396B700AE71B9 /* 10.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45E29D902A246F7600FE2B1E /* MediaViewModel.swift in Sources */,
-				450A1D982A23C3F500AE71B9 /* socket.swift in Sources */,
+				450A1D982A23C3F500AE71B9 /* Socket.swift in Sources */,
 				450A1D2C2A238B9700AE71B9 /* ContentView.swift in Sources */,
 				450A1D552A238BBE00AE71B9 /* Decoder.swift in Sources */,
 				450A1D2A2A238B9700AE71B9 /* MediaExp02MacApp.swift in Sources */,
@@ -466,7 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				450A1D8A2A23AB7700AE71B9 /* socket.swift in Sources */,
+				450A1D8A2A23AB7700AE71B9 /* Socket.swift in Sources */,
 				450A1D632A23930100AE71B9 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,7 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				450A1D972A23B82700AE71B9 /* socket.swift in Sources */,
+				450A1D972A23B82700AE71B9 /* Socket.swift in Sources */,
 				450A1D932A23B81200AE71B9 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -741,6 +741,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 2F4698C227;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -752,6 +753,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 2F4698C227;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";

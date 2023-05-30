@@ -50,16 +50,16 @@ class MediaViewModel: ObservableObject {
         isDecoderThreadRunning = true
         
         // Start the socket thread
-        DispatchQueue.global().async {
+        DispatchQueue.global().async(qos: .background) {
             self.socketThread()
         }
         
         // Start the decoder thread
-        DispatchQueue.global().async {
+        DispatchQueue.global().async(qos: .userInteractive) {
             self.decoderThread()
         }
         
-        DispatchQueue.global().async {
+        DispatchQueue.global().async(qos: .userInteractive) {
             self.frameThread()
         }
     }
@@ -68,6 +68,7 @@ class MediaViewModel: ObservableObject {
         isDecoderThreadRunning = false
     }
     
+    /// server client communication
     private func socketThread() {
         do {
             let clientPort: UInt16 = 12345
@@ -119,6 +120,7 @@ class MediaViewModel: ObservableObject {
         }
     }
     
+    // decode thread
     private func decoderThread() {
         while isDecoderThreadRunning {
             binSemaphore.wait()
@@ -155,6 +157,7 @@ class MediaViewModel: ObservableObject {
             
             if let processingBlock = block {
                 let renderedFrames = getGrayscaleImagesFromYpChannel(block: processingBlock)
+//                let renderedFrames = getFramesFrom420YpCbCrBlock(block: processingBlock)
                 
                 DispatchQueue.main.sync {
                     self.cachedFrames += blockFrames
@@ -192,4 +195,3 @@ struct Frame {
     let frameId: Int
     let cgImage: CGImage
 }
-

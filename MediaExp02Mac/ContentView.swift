@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    /// view model
     @StateObject private var meidaViewModel = MediaViewModel()
+    /// pause controller
     @State private var isPaused = false
+    /// speed controller
     @State private var speedConstant = 6
+    /// use counter and timer to update frames
     @State private var counter = 0
     
     let timer = Timer.publish(every: 0.02/6.0, on: .main, in: .common).autoconnect()
@@ -27,6 +31,7 @@ struct ContentView: View {
                         .overlay(alignment: .bottom) {
                             VStack{
                                 HStack{
+                                    // play and paused controller
                                     Button {
                                         isPaused.toggle()
                                     } label: {
@@ -37,6 +42,8 @@ struct ContentView: View {
                                         }
                                     }
                                     .padding(.horizontal)
+                                    
+                                    // Speed Controller
                                     Picker("Speed", selection: $speedConstant) {
                                         Text("1/4").tag(24)
                                         Text("1/2").tag(12)
@@ -48,6 +55,7 @@ struct ContentView: View {
                                     .padding(.horizontal)
                                 }
                                 ZStack{
+                                    // play and cached progress view
                                     ProgressView(value: Double(meidaViewModel.cachedFrames), total: 500)
                                         .tint(.gray)
                                     Slider(value: .constant(Double(image.frameId)), in: 0.0...500)
@@ -60,6 +68,7 @@ struct ContentView: View {
         }
         .padding()
         .onReceive(timer) { _  in
+            /// update frame.
             if !isPaused {
                 counter += 1
                 if counter % speedConstant == 0 {

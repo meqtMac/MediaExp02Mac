@@ -35,6 +35,7 @@ func decoder(seqId: Int, inputData: Data) -> Data? {
     
     let task = Process()
     task.launchPath = decoderPath
+    /// call Decoder
     task.arguments = ["-b", inputFilePath.path, "-o", outputFilePath.path]
     
     let pipe = Pipe()
