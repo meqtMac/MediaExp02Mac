@@ -14,15 +14,16 @@ let frameHeight = 480
 let blockFrames = 50
 
 class MediaViewModel: ObservableObject {
-    @Published var processedData: [Int] = []
+    @Published var cachedFrames: Int = 0
     @Published var currentFrame: Frame?
     
-    func updateCurrentFrame() {
+    func updateCurrentFrame() -> Int? {
         self.frameQueue.sync{
             if !frames.isEmpty {
                 currentFrame = frames.removeFirst()
             }
         }
+        return currentFrame?.frameId
     }
     
     /// fifo operation
@@ -44,7 +45,6 @@ class MediaViewModel: ObservableObject {
     // private var frameSemaphore = DispatchSemaphore(value: 0)
     
     private var isDecoderThreadRunning = false
-    var lastProcessedSeqId: Int = -1
     
     func startProcessing() {
         isDecoderThreadRunning = true
@@ -114,7 +114,6 @@ class MediaViewModel: ObservableObject {
             }
             
             socket.close()
-            
         } catch {
             print("Error: \(error)")
         }
@@ -157,13 +156,12 @@ class MediaViewModel: ObservableObject {
             if let processingBlock = block {
                 let renderedFrames = getGrayscaleImagesFromYpChannel(block: processingBlock)
                 
-                self.frameQueue.sync{
-                    print("put images to frames")
-                    self.frames.append(contentsOf: renderedFrames)
+                DispatchQueue.main.sync {
+                    self.cachedFrames += blockFrames
                 }
                 
-                DispatchQueue.main.async{
-                    self.processedData.append(contentsOf: renderedFrames.map({$0.frameId}))
+                self.frameQueue.sync{
+                    self.frames.append(contentsOf: renderedFrames)
                 }
             }
         }
