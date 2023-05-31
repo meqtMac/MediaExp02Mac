@@ -8,9 +8,14 @@
 import Foundation
 import Darwin
 
+/// A struct representing a socket.
 public struct Socket {
+    /// The file descriptor of the socket.
     public let socketFileDescriptor: Int32
     
+    /// Sends data over the socket.
+    /// - Parameter data: The data to send.
+    /// - Throws: SocketError if sending fails.
     public func sendData(_ data: Data) throws {
         try data.withUnsafeBytes { bufferPointer in
             let bufferAddress = bufferPointer.bindMemory(to: UInt8.self).baseAddress
@@ -23,6 +28,9 @@ public struct Socket {
         }
     }
     
+    /// Receives data from the socket.
+    /// - Returns: The received data.
+    /// - Throws: SocketError if receiving fails.
     public func receiveData() throws -> Data {
         var receivedData = Data()
         let bufferSize = 4096
@@ -35,14 +43,19 @@ public struct Socket {
         return receivedData
     }
     
+    /// Closes the socket.
     public mutating func close() {
         if socketFileDescriptor != -1 {
             Darwin.close(socketFileDescriptor)
         }
     }
     
+    /// Sends a file over the socket.
+    /// - Parameter data: The file data to send.
+    /// - Throws: SocketError if sending fails.
     public func sendFile(data: Data) throws {
         let fileSize = data.count
+        // send file byte count
         let fileSizeData = withUnsafeBytes(of: fileSize.bigEndian) { Data($0) }
         
         try sendData(fileSizeData) // Send the total file size to the other end
@@ -63,6 +76,9 @@ public struct Socket {
         print("finished send bytes: \(bytesSent)")
     }
     
+    /// Extracts an integer from the provided data.
+    /// - Parameter data: The data containing the integer.
+    /// - Returns: The extracted integer, or nil if extraction fails.
     func extractInt(from data: Data) -> Int? {
         guard data.count == MemoryLayout<Int>.size else {
             return nil // Data size does not match the size of an Int
@@ -78,6 +94,9 @@ public struct Socket {
         return intValue
     }
     
+    /// Receives a file from the socket.
+    /// - Returns: The received file data, or nil if receiving fails.
+    /// - Throws: SocketError if receiving fails.
     public func receiveFile() throws -> Data? {
         let fileSizeData = try receiveData()
         
@@ -106,11 +125,15 @@ public struct Socket {
     }
 }
 
+/// An enumeration representing socket errors.
 public enum SocketError: Error {
     case sendFailed(String)
     case receiveFailed(String)
 }
 
+/// Casts a pointer to `sockaddr`.
+/// - Parameter ptr: The pointer to cast.
+/// - Returns: A pointer to `sockaddr`.
 public func sockaddr_cast(_ ptr: UnsafeMutableRawPointer) -> UnsafeMutablePointer<sockaddr> {
     return ptr.assumingMemoryBound(to: sockaddr.self)
 }
