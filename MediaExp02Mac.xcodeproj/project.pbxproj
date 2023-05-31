@@ -13,8 +13,8 @@
 		450A1D552A238BBE00AE71B9 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D542A238BBE00AE71B9 /* Decoder.swift */; };
 		450A1D592A238DBE00AE71B9 /* TAppDecoder in Resources */ = {isa = PBXBuildFile; fileRef = 450A1D582A238DBD00AE71B9 /* TAppDecoder */; };
 		450A1D632A23930100AE71B9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D622A23930100AE71B9 /* main.swift */; };
-		450A1D8A2A23AB7700AE71B9 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D892A23AB7700AE71B9 /* Socket.swift */; };
-		450A1D982A23C3F500AE71B9 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D892A23AB7700AE71B9 /* Socket.swift */; };
+		450A1D8A2A23AB7700AE71B9 /* socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D892A23AB7700AE71B9 /* socket.swift */; };
+		450A1D982A23C3F500AE71B9 /* socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A1D892A23AB7700AE71B9 /* socket.swift */; };
 		45417D5C2A2611D6008FE147 /* 1.bin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 450A1D702A23932B00AE71B9 /* 1.bin */; };
 		45417D5D2A2611D6008FE147 /* 2.bin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 450A1D682A23932B00AE71B9 /* 2.bin */; };
 		45417D5E2A2611D6008FE147 /* 3.bin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 450A1D6A2A23932B00AE71B9 /* 3.bin */; };
@@ -82,7 +82,7 @@
 		450A1D6F2A23932B00AE71B9 /* 10.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 10.bin; sourceTree = "<group>"; };
 		450A1D702A23932B00AE71B9 /* 1.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 1.bin; sourceTree = "<group>"; };
 		450A1D712A23932B00AE71B9 /* 5.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 5.bin; sourceTree = "<group>"; };
-		450A1D892A23AB7700AE71B9 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		450A1D892A23AB7700AE71B9 /* socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socket.swift; sourceTree = "<group>"; };
 		45E29D8F2A246F7600FE2B1E /* MediaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewModel.swift; sourceTree = "<group>"; };
 		45E29D912A24915800FE2B1E /* Frames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frames.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,7 +158,7 @@
 		450A1D612A23930100AE71B9 /* MediaExp02Server */ = {
 			isa = PBXGroup;
 			children = (
-				450A1D892A23AB7700AE71B9 /* Socket.swift */,
+				450A1D892A23AB7700AE71B9 /* socket.swift */,
 				450A1D622A23930100AE71B9 /* main.swift */,
 			);
 			path = MediaExp02Server;
@@ -324,7 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45E29D902A246F7600FE2B1E /* MediaViewModel.swift in Sources */,
-				450A1D982A23C3F500AE71B9 /* Socket.swift in Sources */,
+				450A1D982A23C3F500AE71B9 /* socket.swift in Sources */,
 				450A1D2C2A238B9700AE71B9 /* ContentView.swift in Sources */,
 				450A1D552A238BBE00AE71B9 /* Decoder.swift in Sources */,
 				450A1D2A2A238B9700AE71B9 /* MediaExp02MacApp.swift in Sources */,
@@ -344,7 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				450A1D8A2A23AB7700AE71B9 /* Socket.swift in Sources */,
+				450A1D8A2A23AB7700AE71B9 /* socket.swift in Sources */,
 				450A1D632A23930100AE71B9 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

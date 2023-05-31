@@ -50,16 +50,16 @@ class MediaViewModel: ObservableObject {
         isDecoderThreadRunning = true
         
         // Start the socket thread
-        DispatchQueue.global().async(qos: .background) {
+        DispatchQueue.global().async {
             self.socketThread()
         }
         
         // Start the decoder thread
-        DispatchQueue.global().async(qos: .userInteractive) {
+        DispatchQueue.global().async {
             self.decoderThread()
         }
         
-        DispatchQueue.global().async(qos: .userInteractive) {
+        DispatchQueue.global().async {
             self.frameThread()
         }
     }
@@ -156,8 +156,7 @@ class MediaViewModel: ObservableObject {
             }
             
             if let processingBlock = block {
-                let renderedFrames = getGrayscaleImagesFromYpChannel(block: processingBlock)
-//                let renderedFrames = getFramesFrom420YpCbCrBlock(block: processingBlock)
+                let renderedFrames = getFramesFrom420YpCbCrBlock(block: processingBlock)
                 
                 DispatchQueue.main.sync {
                     self.cachedFrames += blockFrames
