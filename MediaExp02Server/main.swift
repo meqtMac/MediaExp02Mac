@@ -7,6 +7,7 @@
 
 import Foundation
 import Darwin
+//import MyHTTP
 
 func startServer() {
    /** after try, I found for Xcode Command Line Tool, for example you have a Project, and a Target myServer under MyServer Folder, and you have files maybe in Resources/ with name 1.bin, you can add it by copy Files and give a custom path for example Bins/, don't click copy only when installing, the add 1.bin file in below. After that you can access the file with
@@ -102,4 +103,8 @@ func startServer() {
     print("Server stopped")
 }
 
-startServer()
+//startServer()
+
+import MyHTTP
+//let req1 = HTTPRe
+//let req1 =
